@@ -6,40 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
 </head>
 <body>
   <div class="table-container">
         <table>
-        <tr><td colspan="4"id="screen">Screeeeeen</td> </tr>
+        <tr><td colspan="4"class="screen"><div id="screen"></div>
+        </td> </tr>
         <tr>
-          <td><div class="table-item">C</div></th>
-          <td><div class="table-item">+/-</div></th>
-          <td> <div class="table-item">Del</div> </th>
-          <td><div class="table-item operator" >÷</div></th>
+          <td><div class="table-item" id="C" onclick="clearScreen()">C</div></th>
+          <td><div class="table-item" id="--" onclick="input(' -')" >+/-</div></th>
+          <td> <div class="table-item" id="del" onclick="backSpace()">Del</div> </th>
+          <td><div class="table-item operator" id="/" onclick="input('÷')" >÷</div></th>
         </tr>
       
         <tr>
-          <td><div class="table-item">7</div></td>
-          <td><div class="table-item">8</div> </td>
-          <td><div class="table-item">9</div></td>
-          <td><div class="table-item operator">x</div></td>
+          <td><div class="table-item" id="7" onclick="input(7)">7</div></td>
+          <td><div class="table-item" id="8" onclick="input(8)">8</div> </td>
+          <td><div class="table-item" id="9" onclick="input(9)">9</div></td>
+          <td><div class="table-item operator" id="*" onclick="input('x')">x</div></td>
         </tr>
         <tr>
-          <td><div class="table-item">4</div></td>
-          <td><div class="table-item">5</div> </td>
-          <td><div class="table-item">6</div></td>
-          <td> <div class="table-item operator">-</div> </td>
+          <td><div class="table-item" id="4" onclick="input(4)">4</div></td>
+          <td><div class="table-item" id="5" onclick="input(5)">5</div> </td>
+          <td><div class="table-item" id="6" onclick="input(6)">6</div></td>
+          <td> <div class="table-item operator " id='-' onclick="input('-')">-</div> </td>
         </tr>
         <tr>
-          <td><div class="table-item">1</div></td>
-          <td><div class="table-item">2</div></td>
-          <td><div class="table-item">3</div></td>
-          <td><div class="table-item operator">+</div></td>
+          <td><div class="table-item" id="1" onclick="input(1)">1</div></td>
+          <td><div class="table-item" id="2" onclick="input(2)">2</div></td>
+          <td><div class="table-item"  id="3" onclick="input(3)">3</div></td>
+          <td><div class="table-item operator" id='+'  onclick="input('+')">+</div></td>
         </tr>
       <tr>
-        <td><div class="table-item">0</div></td>
-        <td><div class="table-item">,</div></td>
-        <td colspan="2"><div class="equal-sign">=</div> </td>    
+        <td><div class="table-item" id="0" onclick="input(0)">0</div></td>
+        <td><div class="table-item" id="," onclick="input('.')">,</div></td>
+        <td colspan="2"><div class="equal-sign" id="=" onclick="operate()">=</div> </td>    
       </tr>
       </table>
    
