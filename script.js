@@ -39,7 +39,7 @@ function operate(){
         if (screenArray[1]==="-" && screenArray[2]==="-") {
             
         };
-        screenValue = parse(screenValue);
+        screenValue = Math.round(parse(screenValue)*100)/100;
         document.getElementById("screen").innerText = screenValue;
     };
 };
